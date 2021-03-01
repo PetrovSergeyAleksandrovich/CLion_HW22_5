@@ -140,6 +140,19 @@ CLion_HW22_5\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion_HW22_5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion_HW22_5.dir\build
 .PHONY : CLion_HW22_5\fast
 
+#=============================================================================
+# Target rules for targets named task_2
+
+# Build rule for target.
+task_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) task_2
+.PHONY : task_2
+
+# fast build rule for target.
+task_2\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_2.dir\build
+.PHONY : task_2\fast
+
 HW22_5_task_1.obj: HW22_5_task_1.cpp.obj
 
 .PHONY : HW22_5_task_1.obj
@@ -166,6 +179,33 @@ HW22_5_task_1.s: HW22_5_task_1.cpp.s
 HW22_5_task_1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_1.dir\HW22_5_task_1.cpp.s
 .PHONY : HW22_5_task_1.cpp.s
+
+HW22_5_task_2.obj: HW22_5_task_2.cpp.obj
+
+.PHONY : HW22_5_task_2.obj
+
+# target to build an object file
+HW22_5_task_2.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_2.dir\HW22_5_task_2.cpp.obj
+.PHONY : HW22_5_task_2.cpp.obj
+
+HW22_5_task_2.i: HW22_5_task_2.cpp.i
+
+.PHONY : HW22_5_task_2.i
+
+# target to preprocess a source file
+HW22_5_task_2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_2.dir\HW22_5_task_2.cpp.i
+.PHONY : HW22_5_task_2.cpp.i
+
+HW22_5_task_2.s: HW22_5_task_2.cpp.s
+
+.PHONY : HW22_5_task_2.s
+
+# target to generate assembly for a file
+HW22_5_task_2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_2.dir\HW22_5_task_2.cpp.s
+.PHONY : HW22_5_task_2.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -204,9 +244,13 @@ help:
 	@echo ... rebuild_cache
 	@echo ... CLion_HW22_5
 	@echo ... task_1
+	@echo ... task_2
 	@echo ... HW22_5_task_1.obj
 	@echo ... HW22_5_task_1.i
 	@echo ... HW22_5_task_1.s
+	@echo ... HW22_5_task_2.obj
+	@echo ... HW22_5_task_2.i
+	@echo ... HW22_5_task_2.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
