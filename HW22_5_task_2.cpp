@@ -14,7 +14,7 @@ int main()
     //std::cin >> path;
     path = "C:\\Users\\Poizone\\CLion_HW22_5\\data.txt";
     my_file.open(path, std::ios::binary);
-    
+
     while(!my_file.is_open())
     {
         std::cout << std::endl;
@@ -23,10 +23,10 @@ int main()
         std::cin >> path;
     }
 
-    std::cout << "\nFile contains: " << std::endl;
+    std::cout << "\nFile contains: \n" << std::endl;
     my_file.read(buffer, sizeof(buffer));
     buffer[n-1] = 0;
-    std::cout << buffer;
+    std::cout << buffer << std::endl << "\ndata.txt file size = " << my_file.gcount() << " byte";
 
     my_file.close();
 
