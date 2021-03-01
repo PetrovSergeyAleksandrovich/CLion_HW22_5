@@ -115,6 +115,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named task_1
+
+# Build rule for target.
+task_1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) task_1
+.PHONY : task_1
+
+# fast build rule for target.
+task_1\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_1.dir\build
+.PHONY : task_1\fast
+
+#=============================================================================
 # Target rules for targets named CLion_HW22_5
 
 # Build rule for target.
@@ -126,6 +139,33 @@ CLion_HW22_5: cmake_check_build_system
 CLion_HW22_5\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CLion_HW22_5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CLion_HW22_5.dir\build
 .PHONY : CLion_HW22_5\fast
+
+HW22_5_task_1.obj: HW22_5_task_1.cpp.obj
+
+.PHONY : HW22_5_task_1.obj
+
+# target to build an object file
+HW22_5_task_1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_1.dir\HW22_5_task_1.cpp.obj
+.PHONY : HW22_5_task_1.cpp.obj
+
+HW22_5_task_1.i: HW22_5_task_1.cpp.i
+
+.PHONY : HW22_5_task_1.i
+
+# target to preprocess a source file
+HW22_5_task_1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_1.dir\HW22_5_task_1.cpp.i
+.PHONY : HW22_5_task_1.cpp.i
+
+HW22_5_task_1.s: HW22_5_task_1.cpp.s
+
+.PHONY : HW22_5_task_1.s
+
+# target to generate assembly for a file
+HW22_5_task_1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_1.dir\HW22_5_task_1.cpp.s
+.PHONY : HW22_5_task_1.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -163,6 +203,10 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CLion_HW22_5
+	@echo ... task_1
+	@echo ... HW22_5_task_1.obj
+	@echo ... HW22_5_task_1.i
+	@echo ... HW22_5_task_1.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
