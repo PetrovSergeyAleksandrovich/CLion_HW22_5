@@ -25,7 +25,7 @@ int main()
         if(i ==3) data == PNG_ID ? std::cout << "YES " : std::cout << "NO ";
     }
     my_file.close();
-    
+
     //OPTION 2
     my_file.open("C:\\Users\\Poizone\\CLion_HW22_5\\picture.png", std::ios::binary);
     std::string from_file;
