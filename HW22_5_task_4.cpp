@@ -9,11 +9,12 @@ int main()
 
     //OPTION 1
     std::vector<char> data;
-    std::vector<char> PNG_ID = {'-', '1', '1', '9', 'P', 'N', 'G'};
     /* set your path on your machine*/
     my_file.open("C:\\Users\\Poizone\\CLion_HW22_5\\picture.png", std::ios::binary);
+
     for(int i = 0; i < 4; i++)
     {
+        std::vector<char> PNG_ID = {'-', '1', '1', '9', 'P', 'N', 'G'};
         char buffer[2];
         my_file.read(buffer, sizeof(buffer)-1);
         buffer[my_file.gcount()] = 0;
@@ -22,11 +23,11 @@ int main()
             continue;
         }
         data.push_back(*buffer);
+        if(i == 3) data == PNG_ID ? std::cout << "YES " : std::cout << "NO ";
     }
     my_file.close();
-    data == PNG_ID ? std::cout << "YES " : std::cout << "NO ";
 
-
+    
     //OPTION 2
     my_file.open("C:\\Users\\Poizone\\CLion_HW22_5\\picture.png", std::ios::binary);
     std::string from_file;
