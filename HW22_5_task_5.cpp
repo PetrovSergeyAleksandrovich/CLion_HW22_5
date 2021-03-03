@@ -57,16 +57,15 @@ int main()
         if(user_answer == answer_text)
         {
             std::cout << "Your answer is correct!" << std::endl;
-            left_questions[stoi(user_input)-1] = 0;
             player++;
         }
         else
         {
             std::cout << "Your answer is wrong! Score goes to spectators" << std::endl;
-            left_questions[stoi(user_input)-1] = 0;
             spectators++;
         }
-
+        
+        left_questions[stoi(user_input)-1] = 0;
         std::cout << "\nPlayer: " << player << "\nSpectators: " << spectators << std::endl;
         my_file.close();
     }
