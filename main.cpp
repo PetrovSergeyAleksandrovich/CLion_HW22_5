@@ -16,7 +16,7 @@ int main()
     my_file.close();
 
     // test output
-    buffer[4] = 0;
+    buffer[my_file.gcount()] = 0;
     std::cout << buffer << std::endl << &buffer << std::endl << buffer[0] << std::endl << buffer[3] ;
 
     return 0;
